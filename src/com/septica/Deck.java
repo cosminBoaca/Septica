@@ -18,8 +18,8 @@ public class Deck
 		int cardRank, cardSuite;
 		for (int i = 0; i < 52; i++)
 		{
-			cardSuite = i % 4 + 2;
-			cardRank = i / 4 + 1;
+			cardSuite = i % 4 + 1;
+			cardRank = i / 4 + 2;
 			deck.add(new Card(cardSuite, cardRank));
 		}
 	}
