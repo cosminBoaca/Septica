@@ -8,7 +8,12 @@ public class Deck
 {	
 	private Queue<Card> deck = new LinkedList<Card>();
 
-	public void deckInitialize()
+	public Deck()
+	{
+		initialize();
+	}
+	
+	public void initialize()
 	{
 		int cardRank, cardSuite;
 		for (int i = 0; i < 52; i++)
@@ -26,8 +31,7 @@ public class Deck
 	
 	public Card getTopCard()
 	{
-		Card topCard = deck.poll();
-		return topCard;
+		return deck.poll();
 	}
 	
 	public void shuffle()
