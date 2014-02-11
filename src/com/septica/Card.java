@@ -2,20 +2,13 @@ package com.septica;
 
 public class Card 
 {
-
 	private int rank;
 	private int suite;
 	
-	/*private Card()
+	public Card(int suite, int rank)
 	{
-		rank = 0;
-		suite = 0;
-	}*/
-	
-	public Card(int suiteValue, int rankValue)
-	{
-		rank = rankValue;
-		suite = suiteValue;
+		this.rank = rank;
+		this.suite = suite;
 	}
 	
 	public int getRank()
@@ -27,5 +20,4 @@ public class Card
 	{
 		return suite;
 	}
-	
 }

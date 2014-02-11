@@ -58,5 +58,4 @@ public class Deck
 			deck.add(deckArray[i]);
 		}
 	}
-	
 }
