@@ -4,6 +4,12 @@ public class Hand
 {
 	private Card[] hand = new Card[4];
 	
+	public Hand()
+	{
+		for (int i = 0; i < 4; i++)
+			hand[i] = null;
+	}
+	
 	public Card discard(int cardIndex)
 	{
 		Card dCard = hand[cardIndex];
