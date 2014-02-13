@@ -20,4 +20,18 @@ public class Card
 	{
 		return suite;
 	}
+	
+	public boolean isPoint()
+	{
+		if (rank == 10 || rank == 11)
+			return true;
+		else return false;
+	}
+	
+	public boolean isSlash()
+	{
+		if (rank == 7)
+			return true;
+		else return false;
+	}
 }
