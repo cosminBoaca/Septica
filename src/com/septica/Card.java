@@ -2,10 +2,19 @@ package com.septica;
 
 public class Card 
 {
+	private static Card[] instance = new Card[52];
 	private int rank;
 	private int suite;
 	
-	public Card(int suite, int rank)
+	public static Card getInstance(int rank, int suite)
+	{
+		int index = (rank - 2) * 4 + suite - 1;
+		if (instance[index] == null)
+			instance[index] = new Card(rank, suite);
+		return instance[index];
+	}
+	
+	private Card(int suite, int rank)
 	{
 		this.rank = rank;
 		this.suite = suite;

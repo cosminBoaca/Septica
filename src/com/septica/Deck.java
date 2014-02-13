@@ -6,12 +6,22 @@ import java.util.Random;
 
 public class Deck 
 {	
+	private static Deck instance = null;
 	private Queue<Card> deck = new LinkedList<Card>();
 
-	public Deck()
+	public static Deck getInstance()
+	{
+		if (instance == null)
+			instance = new Deck();
+		return instance;
+	}
+	
+	private Deck()
 	{
 		initialize();
 	}
+	
+	
 	
 	public void initialize()
 	{
@@ -20,7 +30,7 @@ public class Deck
 		{
 			cardSuite = i % 4 + 1;
 			cardRank = i / 4 + 2;
-			deck.add(new Card(cardSuite, cardRank));
+			deck.add(Card.getInstance(cardSuite, cardRank));
 		}
 	}
 	

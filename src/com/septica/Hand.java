@@ -10,8 +10,10 @@ public class Hand
 			hand[i] = null;
 	}
 	
-	public Card discard(int cardIndex)
+	public Card discard(int cardIndex) throws NullPointerException
 	{
+		if (hand[cardIndex] == null)
+			throw new NullPointerException();
 		Card dCard = hand[cardIndex];
 		hand[cardIndex] = null;
 		return dCard;
